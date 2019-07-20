@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.suryadev.cardview">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".tutorial" />
+        <activity android:name=".tutorial_basics" />
+        <activity android:name=".tutorial_variables" />
+        <activity android:name=".tutorial_operators" />
+        <activity android:name=".decisionMaking" />
+        <activity android:name=".tutorial_loops" />
+        <activity android:name=".tutorial_numbers" />
+        <activity android:name=".tutorial_strings" />
+        <activity android:name=".tutorial_list" />
+        <activity android:name=".tutorials_tuples" />
+        <activity android:name=".tutorial_dictionary" />
+        <activity android:name=".tutorial_files" />
+        <activity android:name=".tutorial_exceptions" />
+        <activity android:name=".webview" />
+        <activity android:name=".AboutUs"></activity>
+    </application>
+
+</manifest>

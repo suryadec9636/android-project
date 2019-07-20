@@ -1,0 +1,488 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">CardView</string>
+    <string name="tutorial_basic">Invoking the interpreter without passing a script file as a parameter brings up the following prompt −\n
+
+$ python\n
+Python 2.4.3 (#1, Nov 11 2010, 13:34:43)\n
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-48)] on linux2\n
+Type "help", "copyright", "credits" or "license" for more information.\n
+>>>\n
+Type the following text at the Python prompt and press the Enter −\n
+
+>>> print "Hello, Python!"\n
+If you are running new version of Python, then you would need to use print statement with parenthesis as in print ("Hello, Python!");. However in Python version 2.4.3, this produces the following result −\n
+
+Hello, Python!\n
+Script Mode Programming\n
+Invoking the interpreter with a script parameter begins execution of the script and continues until the script is finished. When the script is finished, the interpreter is no longer active.\n
+
+Let us write a simple Python program in a script. Python files have extension .py. Type the following source code in a test.py file −\n
+
+ Live Demo\n
+print "Hello, Python!"\n
+We assume that you have Python interpreter set in PATH variable. Now, try to run this program as follows −\n
+
+$ python test.py\n
+This produces the following result −\n
+
+Hello, Python!\n
+Let us try another way to execute a Python script. Here is the modified test.py file −\n
+
+ Live Demo\n
+#!/usr/bin/python\n
+
+print "Hello, Python!"\n
+We assume that you have Python interpreter available in /usr/bin directory. Now, try to run this program as follows −\n
+
+$ chmod +x test.py     # This is to make file executable\n
+$./test.py\n
+This produces the following result −\n
+
+Hello, Python!\n
+Python Identifiers\n
+A Python identifier is a name used to identify a variable, function, class, module or other object. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).\n
+
+Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, Manpower and manpower are two different identifiers in Python.\n
+
+Here are naming conventions for Python identifiers −\n
+
+Class names start with an uppercase letter. All other identifiers start with a lowercase letter.\n
+
+Starting an identifier with a single leading underscore indicates that the identifier is private.\n
+
+Starting an identifier with two leading underscores indicates a strongly private identifier.\n
+
+If the identifier also ends with two trailing underscores, the identifier is a language-defined special name.\n</string>
+    <string name="tutorial_variable">Assigning Values to Variables
+Python variables do not need explicit declaration to reserve memory space. The declaration happens automatically when you assign a value to a variable. The equal sign (=) is used to assign values to variables.\n
+
+The operand to the left of the = operator is the name of the variable and the operand to the right of the = operator is the value stored in the variable. For example −\n\n
+#!/usr/bin/python\n
+
+counter = 100          # An integer assignment\n
+miles   = 1000.0       # A floating point\n
+name    = "John"       # A string\n
+
+print counter\n
+print miles\n
+print name\n\n
+Here, 100, 1000.0 and "John" are the values assigned to counter, miles, and name variables, respectively. This produces the following result −\n
+
+100\n
+1000.0\n
+John\n
+Multiple Assignment\n
+Python allows you to assign a single value to several variables simultaneously. For example −\n\n
+
+a = b = c = 1\n
+Here, an integer object is created with the value 1, and all three variables are assigned to the same memory location. You can also assign multiple objects to multiple variables. For example −\n
+
+a,b,c = 1,2,"john"\n\n
+Here, two integer objects with values 1 and 2 are assigned to variables a and b respectively, and one string object with the value "john" is assigned to the variable c.\n
+
+Standard Data Types\n
+The data stored in memory can be of many types. For example, a person's age is stored as a numeric value and his or her address is stored as alphanumeric characters. Python has various standard data types that are used to define the operations possible on them and the storage method for each of them.\n
+
+Python has five standard data types −\n\n
+
+Numbers\n
+String\n
+List\n
+Tuple\n
+Dictionary\n</string>
+    <string name="tutorial_operators">Operators are the constructs which can manipulate the value of operands.\n
+
+Consider the expression 4 + 5 = 9. Here, 4 and 5 are called operands and + is called operator.\n
+
+Types of Operator\n
+Python language supports the following types of operators.\n\n
+
+Arithmetic Operators\n
+Comparison (Relational) Operators\n
+Assignment Operators\n
+Logical Operators\n
+Bitwise Operators\n
+Membership Operators\n
+Identity Operators\n</string>
+    <string name="tutorial_decision">Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions.\n
+Decision structures evaluate multiple expressions which produce TRUE or FALSE as outcome. You need to determine which action to take and which statements to execute if outcome is TRUE or FALSE otherwise.\n
+
+Following is the general form of a typical decision making structure found in most of the programming languages −\n
+
+Decision making statements in Python\n
+Python programming language assumes any non-zero and non-null values as TRUE, and if it is either zero or null, then it is assumed as FALSE value.\n
+
+Python programming language provides following types of decision making statements. Click the following links to check their detail.\n
+
+Sr.No.	Statement  Description\n
+1	if statements\n
+An if statement consists of a boolean expression followed by one or more statements.\n
+
+2	if...else statements\n
+An if statement can be followed by an optional else statement, which executes when the boolean expression is FALSE.\n
+
+3	nested if statements\n
+You can use one if or else if statement inside another if or else if statement(s).\n
+
+Let us go through each decision making briefly −\n
+
+Single Statement Suites\n
+If the suite of an if clause consists only of a single line, it may go on the same line as the header statement.\n
+
+Here is an example of a one-line if clause −\n
+
+#!/usr/bin/python\n
+
+var = 100\n
+if ( var == 100 ) : print "Value of expression is 100"\n
+print "Good bye!"\n
+When the above code is executed, it produces the following result −\n
+
+Value of expression is 100\n
+Good bye\n</string>
+    <string name="tutorail_loops">In general, statements are executed sequ\nentially: The first statement in a function is executed first, followed by the second, and so on. There may be a situation when you need to execute a block of code several number of times.\n
+
+Programming languages provide various control structures that allow for more complicated execution paths.\n
+
+A loop statement allows us to execute a statement or group of statements multiple times. The following diagram illustrates a loop statement −\n
+
+Loop Architecture\n
+Python programming language provides following types of loops to handle looping requirements.\n
+
+Sr.No.	Loop Type and Description\n\n
+1	while loop\n
+Repeats a statement or group of statements while a given condition is TRUE. It tests the condition before executing the loop body.\n\n
+
+2	for loop\n
+Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.\n\n
+
+3	nested loops\n
+You can use one or more loop inside any another while, for or do..while loop\n</string>
+    <string name="tutorial_numbers">Number data types store numeric values. They are immutable data types, means that changing the value of a number data type results in a newly allocated object.\n\n
+
+Number objects are created when you assign a value to them. For example −\n
+
+var1 = 1\n
+var2 = 10\n\n
+You can also delete the reference to a number object by using the del statement. The syntax of the del statement is −\n
+
+del var1[,var2[,var3[....,varN]]]]\n\n
+You can delete a single object or multiple objects by using the del statement. For example −\n
+
+del var\n
+del var_a, var_b\n\n
+Python supports four different numerical types −\n
+
+int (signed integers) − They are often called just integers or ints, are positive or negative whole numbers with no decimal point.\n\n
+
+long (long integers ) − Also called longs, they are integers of unlimited size, written like integers and followed by an uppercase or lowercase L.\n\n
+
+float (floating point real values) − Also called floats, they represent real numbers and are written with a decimal point dividing the integer and fractional parts. Floats may also be in scientific notation, with E or e indicating the power of 10 (2.5e2 = 2.5 x 102 = 250).\n\n
+
+complex (complex numbers) − are of the form a + bJ, where a and b are floats and J (or j) represents the square root of -1 (which is an imaginary number). The real part of the number is a, and the imaginary part is b. Complex numbers are not used much in Python programming.\n\n
+
+</string>
+    <string name="tutorial_strings">Strings are amongst the most popular types in Python. We can create them simply by enclosing characters in quotes. Python treats single quotes the same as double quotes. Creating strings is as simple as assigning a value to a variable. For example −\n
+
+var1 = \'Hello World!\'\n
+var2 = "Python Programming"\n
+Accessing Values in Strings\n\n
+Python does not support a character type; these are treated as strings of length one, thus also considered a substring.\n
+
+To access substrings, use the square brackets for slicing along with the index or indices to obtain your substring. For example −\n\n
+
+#!/usr/bin/python\n
+
+var1 = \'Hello World!'\n
+var2 = "Python Programming"\n
+
+print "var1[0]: ", var1[0]\n
+print "var2[1:5]: ", var2[1:5]\n\n
+When the above code is executed, it produces the following result −\n
+
+var1[0]:  H\n
+var2[1:5]:  ytho\n\n
+Updating Strings\n
+You can "update" an existing string by (re)assigning a variable to another string. The new value can be related to its previous value or to a completely different string altogether. For example −\n
+
+#!/usr/bin/python\n
+
+var1 = 'Hello World!'\n
+print "Updated String :- ", var1[:6] + 'Python'\n\n
+When the above code is executed, it produces the following result −\n\n
+
+Updated String :-  Hello Python</string>
+    <string name="tutorial_list">The most basic data structure in Python is the sequence. Each element of a sequence is assigned a number - its position or index. The first index is zero, the second index is one, and so forth.\n
+
+Python has six built-in types of sequences, but the most common ones are lists and tuples, which we would see in this tutorial.\n
+
+There are certain things you can do with all sequence types. These operations include indexing, slicing, adding, multiplying, and checking for membership. In addition, Python has built-in functions for finding the length of a sequence and for finding its largest and smallest elements.\n\n
+
+Python Lists\n
+The list is a most versatile datatype available in Python which can be written as a list of comma-separated values (items) between square brackets. Important thing about a list is that items in a list need not be of the same type.\n\n
+
+Creating a list is as simple as putting different comma-separated values between square brackets. For example −\n
+
+list1 = [\physics, chemistry, 1997, 2000];\n
+list2 = [1, 2, 3, 4, 5 ];\n
+list3 = [a, b, c, d]\n
+Similar to string indices, list indices start at 0, and lists can be sliced, concatenated and so on.\n\n
+
+Accessing Values in Lists\n
+To access values in lists, use the square brackets for slicing along with the index or indices to obtain value available at that index. For example −\n
+
+
+#!/usr/bin/python\n\n
+
+list1 = [physics, chemistry, 1997, 2000];\n
+list2 = [1, 2, 3, 4, 5, 6, 7 ];\n
+print "list1[0]: ", list1[0]\n
+print "list2[1:5]: ", list2[1:5]\n\n
+When the above code is executed, it produces the following result −\n\n
+
+list1[0]:  physics\n
+list2[1:5]:  [2, 3, 4, 5]\n
+Updating Lists\n
+You can update single or multiple elements of lists by giving the slice on the left-hand side of the assignment operator, and you can add to elements in a list with the append() method. For example −\n
+
+#!/usr/bin/python\n\n
+
+list = ['physics', 'chemistry', 1997, 2000];\n
+print "Value available at index 2 : "\n
+print list[2]\n
+list[2] = 2001;\n
+print "New value available at index 2 : "\n
+print list[2]\n</string>
+    <string name="tutorial_tuples">A tuple is a sequen\nce of immutable Python objects. Tuples are sequences, just like lists. The differences between tuples and lists are, the tuples cannot be changed unlike lists and tuples use parentheses, whereas lists use square brackets.\n
+
+Creating a tuple is as simple as putting different comma-separated values. Optionally you can put these comma-separated values between parentheses also. For example −\n\n
+
+tup1 = (physics, chemistry, 1997, 2000);\n
+tup2 = (1, 2, 3, 4, 5 );\n
+tup3 = a, b, c, d;\n
+The empty tuple is written as two parentheses containi\n\nng nothing −\n\n
+
+tup1 = ();\n\n
+To write a tuple containing a single value you have to include a comma, even though there is only one value −\n\n
+
+tup1 = (50,);\n\n
+Like string indices, tuple indices start at 0, and they can be sliced, concatenated, and so on.\n
+
+Accessing Values in Tuples\n
+To access values in tuple, use the square brackets for slicing along with the index or indices to obtain value available at that index. For example −\n
+
+
+#!/usr/bin/python\n
+
+tup1 = (\'physics', \'chemistry', 1997, 2000);\n
+tup2 = (1, 2, 3, 4, 5, 6, 7 );\n
+print "tup1[0]: ", tup1[0];\n
+print "tup2[1:5]: ", tup2[1:5];\n
+When the above code is executed, it produces the following result −\n\n
+
+tup1[0]:  physics\n
+tup2[1:5]:  [2, 3, 4, 5]\n</string>
+    <string name="tutorial_dictionary" tools:ignore="StringEscaping">Each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly braces, like this: {}.\n\n
+
+Keys are unique within a dictionary while values may not be. The values of a dictionary can be of any type, but the keys must be of an immutable data type such as strings, numbers, or tuples.\n
+
+Accessing Values in Dictionary\n
+To access dictionary elements, you can use the familiar square brackets along with the key to obtain its value. Following is a simple example −\n\n
+
+ Live Demo\n
+#!/usr/bin/python\n
+
+dict = {Name: 'Zara', 'Age': 7, 'Class': 'First'}\n
+print "dict['Name']: ", dict['Name']\n
+print "dict['Age']: ", dict['Age']\n\n
+When the above code is executed, it produces the following result −\n
+
+dict['Name']:  Zara\n
+dict['Age']:  7\n
+If we attempt to access a data item with a key, which is not part of the dictionary, we get an error as follows −\n
+
+ Live Demo\n\n
+#!/usr/bin/python\n
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}\n
+print "dict['Alice']: ", dict['Alice']\n\n
+When the above code is executed, it produces the following result −\n
+
+dict['Alice']:\n\n
+Traceback (most recent call last):\n\n
+   File "test.py", line 4, in \n
+      print "dict['Alice']: ", dict['Alice'];\n
+KeyError: 'Alice'\n\n\n
+Updating Dictionary\n
+You can update a dictionary by adding a new entry or a key-value pair, modifying an existing entry, or deleting an existing entry as shown below in the simple example −\n\n
+
+ Live Demo\n
+#!/usr/bin/python\n
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}\n
+dict['Age'] = 8; # update existing entry\n
+dict['School'] = "DPS School"; # Add new entry\n\n
+
+print "dict['Age']: ", dict['Age']\n
+print "dict['School']: ", dict['School']\n
+When the above code is executed, it produces the following result −\n\n
+
+dict['Age']:  8\n
+dict['School']:  DPS School\n</string>
+    <string name="tutorial_functions">A function is a block of organized, reusable code that is used to perform a single, related action. Functions provide better modularity for your application and a high degree of code reusing.\n\n
+
+As you already know, Python gives you many built-in functions like print(), etc. but you can also create your own functions. These functions are called user-defined functions.\n\n
+
+Defining a Function\n
+You can define functions to provide the required functionality. Here are simple rules to define a function in Python.\n
+
+Function blocks begin with the keyword def followed by the function name and parentheses ( ( ) ).\n
+
+Any input parameters or arguments should be placed within these parentheses. You can also define parameters inside these parentheses.\n\n
+
+The first statement of a function can be an optional statement - the documentation string of the function or docstring.\n
+
+The code block within every function starts with a colon (:) and is indented.\n\n
+
+The statement return [expression] exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return None.\n\n
+
+Syntax\n
+def functionname( parameters ):\n
+   "function_docstring"\n
+   function_suite\n
+   return [expression]\n
+By default, parameters have a positional behavior and you need to inform them in the same order that they were defined.\n\n
+
+Example\n
+The following function takes a string as input parameter and prints it on standard screen.\n
+
+def printme( str ):\n
+   "This prints a passed string into this function"\n
+   print str\n
+   return\n
+</string>
+    <string name="tutorial_files">This chapter covers all the basic I/O functions available in Python. For more functions, please refer to standard Python documentation.\n
+
+Printing to the Screen\n
+The simplest way to produce output is using the print statement where you can pass zero or more expressions separated by commas. This function converts the expressions you pass into a string and writes the result to standard output as follows −\n\n
+
+ Live Demo\n
+#!/usr/bin/python\n
+
+print "Python is really a great language,", "isn't it?"\n
+This produces the following result on your standard screen −\n
+
+Python is really a great language, isn\'t it?\n
+Reading Keyboard Input\n
+Python provides two built-in functions to read a line of text from standard input, which by default comes from the keyboard. These functions are −\n\n
+
+raw_input\n
+input\n
+The raw_input Function\n\n
+The raw_input([prompt]) function reads one line from standard input and returns it as a string (removing the trailing newline).\n
+
+#!/usr/bin/python\n
+
+str = raw_input("Enter your input: ");\n
+print "Received input is : ", str\n
+This prompts you to enter any string and it would display same string on the screen. When I typed "Hello Python!", its output is like this −\n
+
+Enter your input: Hello Python\n
+Received input is :  Hello Python\n
+The input Function\n\n
+The input([prompt]) function is equivalent to raw_input, except that it assumes the input is a valid Python expression and returns the evaluated result to you.\n
+
+#!/usr/bin/python\n
+
+str = input("Enter your input: ");\n
+print "Received input is : ", str\n
+This would produce the following result against the entered input −\n
+
+Enter your input: [x*5 for x in range(2,10,2)]\n
+Recieved input is :  [10, 20, 30, 40]\n\n
+Opening and Closing Files\n
+Until now, you have been reading and writing to the standard input and output. Now, we will see how to use actual data files.\n
+
+Python provides basic functions and methods necessary to manipulate files by default. You can do most of the file manipulation using a file object.\n
+
+The open Function\n
+Before you can read or write a file, you have to open it using Python's built-in open() function. This function creates a file object, which would be utilized to call other support methods associated with it.\n\n
+
+Syntax\n
+file object = open(file_name [, access_mode][, buffering])\n
+Here are parameter details −\n
+
+file_name − The file_name argument is a string value that contains the name of the file that you want to access.\n
+
+access_mode − The access_mode determines the mode in which the file has to be opened, i.e., read, write, append, etc. A complete list of possible values is given below in the table. This is optional parameter and the default file access mode is read (r).\n
+
+buffering − If the buffering value is set to 0, no buffering takes place. If the buffering value is 1, line buffering is performed while accessing a file. If you specify the buffering value as an integer greater than 1, then buffering action is performed with the indicated buffer size. If negative, the buffer size is the system default(default behavior)\n.</string>
+    <string name="tutorial_rxceptions">Python provides two very important features to handle any unexpected error in your Python programs and to add debugging capabilities in them −\n
+
+Exception Handling − This would be covered in this tutorial. Here is a list standard Exceptions available in Python: Standard Exceptions.\n
+
+Assertions − This would be covered in Assertions in Python tutorial.\n\n
+
+List of Standard Exceptions −\n
+
+Sr.No.	Exception Name and Description\n\n
+1. Exception : Base class for all exceptions\n\n
+
+2. StopIteration : Raised when the next() method of an iterator does not point to any object.\n\n
+
+3. SystemExit : Raised by the sys.exit() function.\n\n
+
+4.StandardError :Base class for all built-in exceptions except StopIteration and SystemExit.\n\n
+
+5. ArithmeticError : Base class for all errors that occur for numeric calculation.\n\n
+
+6:OverflowError: Raised when a calculation exceeds maximum limit for a numeric type.\n\n
+
+7. FloatingPointError : Raised when a floating point calculation fails.\n\n
+
+8. ZeroDivisionError : Raised when division or modulo by zero takes place for all numeric types.\n\n
+
+9. AssertionError :Raised in case of failure of the Assert statement.\n\n
+
+10. AttributeError: Raised in case of failure of attribute reference or assignment.\n\n
+
+11. EOFError : Raised when there is no input from either the raw_input() or input() function and the end of file is reached.\n\n
+
+12. ImportError : Raised when an import statement fails.\n\n
+
+13. KeyboardInterrupt : Raised when the user interrupts program execution, usually by pressing Ctrl+c.\n\n
+
+14. LookupError : Base class for all lookup errors.\n\n
+
+15. IndexError : Raised when an index is not found in a sequence.\n\n
+
+16. KeyError : Raised when the specified key is not found in the dictionary.\n\n
+
+17. NameError :Raised when an identifier is not found in the local or global namespace.\n\n
+
+18. UnboundLocalError : Raised when trying to access a local variable in a function or method but no value has been assigned to it.\n\n
+
+19. EnvironmentError : Base class for all exceptions that occur outside the Python environment.\n\n
+
+20. IOError : Raised when an input/ output operation fails, such as the print statement or the open() function when trying to open a file that does not exist.\n\n
+
+21. IOError : Raised for operating system-related errors.\n\n
+
+22. SyntaxError : Raised when there is an error in Python syntax.\n\n
+
+23. IndentationError : Raised when indentation is not specified properly.\n\n
+
+24. SystemError : Raised when the interpreter finds an internal problem, but when this error is encountered the Python interpreter does not exit.\n\n
+
+25. SystemExit : Raised when Python interpreter is quit by using the sys.exit() function. If not handled in the code, causes the interpreter to exit.\n\n
+
+26.TypeError : Raised when an operation or function is attempted that is invalid for the specified data type.\n\n
+
+27.ValueError : Raised when the built-in function for a data type has the valid type of arguments, but the arguments have invalid values specified.\n\n
+
+28. RuntimeError : Raised when a generated error does not fall into any category.\n\n
+
+29. NotImplementedError : Raised when an abstract method that needs to be implemented in an inherited class is not actually implemented.\n\n
+
+</string>
+</resources>
